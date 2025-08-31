@@ -23,12 +23,20 @@ class Persona{
     saludar(){
         return`Hola, soy ${this.nombreCompleto} y vivo ${this.pais}`;
     }
+
+    static describirPersona(persona){
+        return `Esta persona se llama ${persona.nombreCompleto} y es de ${persona.pais}`
+    }
+
 }
+
+
 
 const alexys=new Persona('Alexis','Lozada','Colombia');
 console.log(alexys.saludar());
 const juan=new Persona('Juan','martin','Argentina');
 console.log(juan.saludar());
+console.log(Persona.describirPersona(juan));
 
 //herencia creacion de subclase
 class Profesor extends Persona{
